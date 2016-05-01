@@ -1,0 +1,11 @@
+*.sw*
+*~
+build/
+bin/
+node_modules/
+*.sublime-workspace
+obj/
+*.suo
+*.user
+packages
+applicationhost.config
