@@ -1,11 +1,11 @@
 {
   "author": "David Tyler",
-  "bugs": "https://github.com/DaveTCode/angular-template/issues",
+  "bugs": "https://github.com/DaveTCode/story-web-app-client/issues",
   "license": "MIT",
-  "name": "angular-template",
+  "name": "story-book-web-app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DaveTCode/angular-template.git"
+    "url": "https://github.com/DaveTCode/story-web-app-client.git"
   },
   "scripts": {
     "prestart": "npm install",
@@ -13,7 +13,7 @@
     "pretest": "npm install",
     "test": "karma start karma.conf.js"
   },
-  "version": "0.8.0",
+  "version": "0.0.1",
   "dependencies": {
     "angular": "1.5.5",
     "angular-animate": "1.5.5",
