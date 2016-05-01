@@ -13,8 +13,22 @@ function run($rootScope, errorService) {
    */
   $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
     if (angular.isDefined(toState.data.pageTitle)) {
-      $rootScope.pageTitle = toState.data.pageTitle + ' | Angular Template' ;
+      $rootScope.pageTitle = toState.data.pageTitle + ' | Story Book' ;
     }
+  });
+}
+
+function config($urlRouterProvider, $stateProvider) {
+  $urlRouterProvider.otherwise('/home');
+
+  $stateProvider.state('app', {
+    url: '/',
+    abstract: true,
+    templateUrl: 'parent.tpl.html',
+    controller: function () {
+
+    },
+    controllerAs: 'app'
   });
 }
   
@@ -29,7 +43,5 @@ angular.module('angularTemplate', [
   'ui.router',
   'errors',
   'dataFactory'])
-  .config(function($urlRouterProvider) {
-    $urlRouterProvider.otherwise('/home');
-  })
+  .config(config)
   .run(run);
