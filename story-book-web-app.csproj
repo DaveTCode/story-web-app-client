@@ -44,6 +44,9 @@
     <Content Include="e2e-tests\protractor.conf.js" />
     <Content Include="Gruntfile.js" />
     <Content Include="karma.conf.js" />
+    <Content Include="src\app\data\chapter.js" />
+    <Content Include="src\app\data\section.js" />
+    <Content Include="src\app\data\story.js" />
     <Content Include="src\app\home\home.scss" />
     <Content Include="src\common\loading\loading.scss" />
     <Content Include="src\scss\colors.scss" />
