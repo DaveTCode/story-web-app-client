@@ -22,11 +22,11 @@ angular.module('angularTemplate', [
   'templates-app',
   'templates-common',
   'angularTemplate.home',
-  'ngSanitize',
   'ngAnimate',
   'ngCookies',
+  'ngMaterial',
+  'ngSanitize',
   'ui.router',
-  'ui.bootstrap',
   'errors',
   'dataFactory'])
   .config(function($urlRouterProvider) {

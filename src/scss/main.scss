@@ -1,23 +1,12 @@
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import '../../node_modules/angular-material/angular-material.scss';
 @import 'colors.scss';
 @import 'variables.scss';
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
-}
 
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   position: relative;
-}
-
-body {
-  padding-top: ($navbar-height + 10px);
 }
 
 @import '../app/home/home.scss';

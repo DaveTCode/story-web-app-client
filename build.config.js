@@ -22,20 +22,15 @@ module.exports = {
   vendor_files: {
     js: [
       'node_modules/angular/angular.js',
-      'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
-      'node_modules/angular-ui-router/release/angular-ui-router.js',
-      'node_modules/angular-sanitize/angular-sanitize.js',
+      'node_modules/angular-aria/angular-aria.js',
       'node_modules/angular-animate/angular-animate.js',
-      'node_modules/angular-cookies/angular-cookies.js'
+      'node_modules/angular-cookies/angular-cookies.js',
+      'node_modules/angular-material/angular-material.js',
+      'node_modules/angular-messages/angular-messages.js',
+      'node_modules/angular-sanitize/angular-sanitize.js',
+      'node_modules/angular-ui-router/release/angular-ui-router.js'
     ],
     css: [
-    ],
-    assets: [
-      'node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot',
-      'node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg',
-      'node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf',
-      'node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff',
-      'node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2'
     ]
   },
 };

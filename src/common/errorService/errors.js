@@ -1,28 +1,27 @@
 class ErrorService {
-  constructor($uibModal) {
-    this.$uibModal = $uibModal;
+  constructor($mdDialog) {
+    this.$mdDialog = $mdDialog;
   }
   
   showError(error) {
-    this.$uibModal.open({
-        templateUrl: 'errorService/error.tpl.html',
-        controller: 'errorController',
-        controllerAs: 'err',
-        keyboard: false,
-        backdrop: 'static',
-        resolve: {
-          error: function() {
-            return error;
-          }
-        }
-      });
+    this.$mdDialog.show({
+      parent: angular.element(document.body),
+      templateUrl: 'errorService/error.tpl.html',
+      controller: 'errorController',
+      controllerAs: 'err',
+      escapeToClose: false,
+      clickOutsideToClose: false,
+      locals: {
+        error: error
+      }
+    });
   }
 }
 
 class ErrorController {
-  constructor($window, $uibModalInstance, error) {
+  constructor($window, $mdDialog, error) {
     this.$window = $window;
-    this.$uibModalInstance = $uibModalInstance;
+    this.$mdDialog = $mdDialog;
     this.error = error;
   }
   
@@ -31,6 +30,6 @@ class ErrorController {
   }
 }
 
-angular.module('errors', ['ui.bootstrap'])
+angular.module('errors', ['ngMaterial'])
   .service('errorService', ErrorService)
   .controller('errorController', ErrorController);

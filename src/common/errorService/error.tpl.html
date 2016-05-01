@@ -1,10 +1,16 @@
-<div class="modal-header">
-  <h3 class="modal-title">Connection Error</h3>
-</div>
-<div class="modal-body">
-  <p>There was an error communicating with the application. Refresh to try again.</p>
-  <p>Message - {{ err.error.message || "Unexpected error occurred" }}</p>
-</div>
-<div class="modal-footer">
-  <button class="btn btn-primary" ng-click="err.refresh()">Refresh</button>
-</div>
+<md-dialog aria-label="Connection Error" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Connection Error</h2>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <div class="md-dialog-content">
+      <p>There was an error communicating with the application. Refresh to try again.</p>
+      <p>Message - {{ err.error.message || "Unexpected error occurred" }}</p>
+    </div>
+  </md-dialog-content>
+  <md-dialog-actions layout="row">
+    <md-button class="md-primary" ng-click="err.refresh()">Refresh</md-button>
+  </md-dialog-actions>
+</md-dialog>

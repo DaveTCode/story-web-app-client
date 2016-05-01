@@ -1,7 +1,7 @@
 class LoadingService {
-  constructor($q, $uibModal) {
+  constructor($q, $mdDialog) {
     this.$q =  $q;
-    this.$uibModal = $uibModal;
+    this.$mdDialog = $mdDialog;
     this.loading = [];
   }
   
@@ -9,30 +9,26 @@ class LoadingService {
     this.loading.push(deferred.promise);
 
     if (this.loading.length === 1) {
-      this.modalInstance = this.$uibModal.open({
+      this.modalInstance = this.$mdDialog.show({
         templateUrl: 'loading/loading-modal.tpl.html',
         controller: 'loadingModalController',
         controllerAs: 'loading',
-        backdrop: 'static',
-        size: 'sm',
-        keyboard: false,
-        animation: false
+        escapeToClose: false,
+        clickOutsideToClose: false
       });
     }
   }
 }
 
 class LoadingModalController {
-  constructor($uibModalInstance, $timeout, $q, loadingService) {
+  constructor($mdDialog, $timeout, $q, loadingService) {
     $q.all(loadingService.loading)['finally'](function() {
       loadingService.loading = [];
-      $timeout(function() {
-        $uibModalInstance.close();
-      }, 50);
+      $mdDialog.hide();
     });
   }
 }
 
-angular.module('loading', ['ui.bootstrap'])
+angular.module('loading', ['ngMaterial'])
   .service('loadingService', LoadingService)
   .controller('loadingModalController', LoadingModalController);
