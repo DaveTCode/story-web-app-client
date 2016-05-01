@@ -31,6 +31,8 @@ module.exports = {
       'node_modules/angular-ui-router/release/angular-ui-router.js'
     ],
     css: [
+    ],
+    assets: [
     ]
   },
 };
