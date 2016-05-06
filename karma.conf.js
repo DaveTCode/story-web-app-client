@@ -7,18 +7,26 @@ module.exports = function(config){
       'build/**/*.js',
       'src/**/*.spec.js'
     ],
+    preprocessors: {
+      'src/**/*.js': 'coverage'
+    },
     frameworks: ['jasmine'],
     browsers : ['PhantomJS'],
     plugins : [
             'karma-jasmine',
             'karma-junit-reporter',
-            'karma-phantomjs-launcher'
+            'karma-phantomjs-launcher',
+            'karma-coverage'
             ],
-    reporters: ['dots', 'junit'],
+    reporters: ['dots', 'junit', 'coverage'],
     junitReporter : {
       outputFile: 'test_out/unit.xml',
       suite: 'unit',
       useBrowserName: false
+    },
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/'
     }
   });
 };
