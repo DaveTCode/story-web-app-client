@@ -315,7 +315,7 @@ module.exports = function ( grunt ) {
   grunt.registerTask( 'build', [
     'clean', 'html2js', 'eslint', 'sass:build',
     'concat:build_css', 'copy:build_app_assets', 'copy:build_vendor_assets',
-    'babel', 'copy:build_vendorcss', 'copy:build_favicon', 'index:build', 'karma:continuous'
+    'babel', 'copy:build_vendorcss', 'copy:build_favicon', 'index:build'
   ]);
   grunt.registerTask( 'compile', [
     'sass:compile', 'copy:compile_assets', 'copy:compile_favicon', 'ngAnnotate',
