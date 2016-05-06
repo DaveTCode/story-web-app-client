@@ -8,10 +8,10 @@
     "url": "https://github.com/DaveTCode/story-web-app-client.git"
   },
   "scripts": {
-    "prestart": "npm install",
+    "prestart": "npm install && grunt build",
     "start": "http-server -a localhost -p 8000 -c-1",
-    "pretest": "npm install",
-    "test": "karma start karma.conf.js"
+    "pretest": "npm install && grunt build",
+    "test": "grunt karma:continuous"
   },
   "version": "0.0.1",
   "dependencies": {
@@ -48,6 +48,7 @@
     "karma-junit-reporter": "0.4.2",
     "karma-phantomjs-launcher": "1.0.0",
     "load-grunt-tasks": "3.5.0",
+    "phantomjs-prebuilt": "2.1.7",
     "protractor": "3.3.0"
   }
 }

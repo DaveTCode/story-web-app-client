@@ -7,7 +7,6 @@ module.exports = function(config){
       'build/**/*.js',
       'src/**/*.spec.js'
     ],
-    autoWatch : true,
     frameworks: ['jasmine'],
     browsers : ['PhantomJS'],
     plugins : [
@@ -15,6 +14,7 @@ module.exports = function(config){
             'karma-junit-reporter',
             'karma-phantomjs-launcher'
             ],
+    reporters: ['dots', 'junit'],
     junitReporter : {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
