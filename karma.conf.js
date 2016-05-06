@@ -8,7 +8,7 @@ module.exports = function(config){
       'src/**/*.spec.js'
     ],
     preprocessors: {
-      'src/**/*.js': 'coverage'
+      'build/src/**/*.js': 'coverage'
     },
     frameworks: ['jasmine'],
     browsers : ['PhantomJS'],
