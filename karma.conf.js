@@ -17,7 +17,8 @@ module.exports = function(config){
     reporters: ['dots', 'junit'],
     junitReporter : {
       outputFile: 'test_out/unit.xml',
-      suite: 'unit'
+      suite: 'unit',
+      useBrowserName: false
     }
   });
 };

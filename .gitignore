@@ -9,3 +9,5 @@ obj/
 *.user
 packages
 applicationhost.config
+
+test_out
