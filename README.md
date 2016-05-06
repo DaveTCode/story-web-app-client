@@ -1,19 +1,19 @@
-# Angular Template #
+[![Coverage Status](https://coveralls.io/repos/github/DaveTCode/story-web-app-client/badge.svg?branch=master)](https://coveralls.io/github/DaveTCode/story-web-app-client?branch=master)
+[![Build Status](https://travis-ci.org/DaveTCode/story-web-app-client.svg?branch=master)](https://travis-ci.org/DaveTCode/story-web-app-client)
 
-This project is a personal seed project for creating angular applications in a very specific format.
+# Story Book - Web Client Application #
+
+This is an angular 1.x & material design application for writing stories.
 
 ### Dependencies ###
 
-* node.js (https://nodejs.org/)
-* firefox
-    * Required for running tests
-* npm (comes with node.js if installing normally)
+* node.js + npm (https://nodejs.org/)
 
 ### Set up ###
 
 * First step is to clone the repository into a directory (doesn't matter where)
 * Run npm install in the new directory
-    * this will install the dev dependencies (grunt plus plugins) and the runtime dependencies (bootstrap, angular, etc)
+    * this will install the dev dependencies (grunt plus plugins) and the runtime dependencies (angular, angular-material etc)
 
 ### Running the application locally ###
 
