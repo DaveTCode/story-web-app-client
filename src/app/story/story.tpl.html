@@ -1,0 +1,18 @@
+﻿<h3 class="md-headline">{{ data.story.title }}</h3>
+<div flex-xs flex-gt-xs="100" layout="row" layout-xs="column" layout-wrap>
+  <md-card ng-repeat="chapter in data.story.chapters track by chapter.id">
+    <md-card-title>
+      <md-card-title-text>
+        <h3 class="md-headline">{{ chapter.title }}</h3>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+      <p>Nothing to show here</p>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button class="md-icon-button" aria-label="Open Story" ng-click="data.loadChapter(chapter)">
+        <i class="material-icons">open_in_new</i>
+      </md-button>
+    </md-card-actions>
+  </md-card>
+</div>

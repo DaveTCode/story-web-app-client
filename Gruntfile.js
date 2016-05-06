@@ -263,14 +263,14 @@ module.exports = function ( grunt ) {
 
       jssrc: {
         files: [
-          '<%= app_files.js %>'
+          'src/**/*.js'
         ],
         tasks: [ 'eslint', 'karma:unit:run', 'babel' ]
       },
 
       sass: {
         files: [
-          '<%= app_files.sass %>'
+          'src/**/*.scss'
         ],
         tasks: [ 'sass' ]
       },

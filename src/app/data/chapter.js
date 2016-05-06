@@ -1,5 +1,6 @@
 ﻿class Chapter {
-  constructor(title) {
+  constructor(id, title) {
+    this.id = id;
     this.title = title;
   }
 }

@@ -1,0 +1,19 @@
+﻿<section layout="row" layout-xs="column" flex>
+  <md-sidenav class="md-sidenav-left md-whiteframe2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+    <md-toolbar class="md-theme-indigo">
+      <h1 class="md-toolbar-tools">Unassigned Sections</h1>
+    </md-toolbar>
+    <md-content layout-padding>
+      <md-list>
+        <md-list-item class="md-3-line" ng-repeat="section in home.unassignedSections track by $index" ng-click="home.loadSection(section)">
+          <div class="md-list-item-text" layout="column">
+            <h3>{{ section.title }}</h3>
+            <h4>Created: {{ section.dateCreated | date:'d MMM yyyy' }}, Modified: {{ section.dateModified | date:'d MMM yyyy' }}</h4>
+            <p>{{ item.notes }}</p>
+          </div>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </md-sidenav>
+  <md-content class="md-padding" ui-view="content"></md-content>
+</section>

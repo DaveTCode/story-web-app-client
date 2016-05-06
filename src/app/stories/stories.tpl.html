@@ -1,0 +1,17 @@
+<div flex-xs flex-gt-xs="100" layout="row" layout-xs="column" layout-wrap>
+  <md-card ng-repeat="story in data.stories track by story.id">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{ story.title }}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+      <p>{{ story.blurb }}</p>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button class="md-icon-button" aria-label="Open Story" ng-click="data.loadStory(story)">
+        <i class="material-icons">open_in_new</i>
+      </md-button>
+    </md-card-actions>
+  </md-card>
+</div>

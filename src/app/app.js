@@ -1,3 +1,14 @@
+class HomeController {
+  constructor($state, unassignedSections) {
+    this.$state = $state;
+    this.unassignedSections = unassignedSections;
+  }
+
+  loadSection(section) {
+    this.$state.go('app.section', { sectionId: section.id });
+  }
+}
+
 function run($rootScope, errorService) {
   /*
    * Error handler - whenever we hit an error resolving data in a state function
@@ -19,29 +30,51 @@ function run($rootScope, errorService) {
 }
 
 function config($urlRouterProvider, $stateProvider) {
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/app/home/stories');
 
-  $stateProvider.state('app', {
-    url: '/',
-    abstract: true,
-    templateUrl: 'parent.tpl.html',
-    controller: function () {
-
-    },
-    controllerAs: 'app'
-  });
+  $stateProvider
+    .state('app', {
+      url: '/app',
+      abstract: true,
+      templateUrl: 'parent.tpl.html',
+      controller: function () { },
+      controllerAs: 'app'
+    })
+    .state('app.home', {
+      url: '/home',
+      abstract: true,
+      views: {
+        'main': {
+          controller: 'homeController',
+          controllerAs: 'home',
+          templateUrl: 'home.tpl.html'
+        }
+      },
+      resolve: {
+        'unassignedSections': function () {
+          return [
+            new Section(1, 'A loose section', 'This is a snippet of the section', new Date(), new Date()),
+            new Section(2, 'Another loose section', 'This is a snippet of the section', new Date(), new Date())
+          ];
+        }
+      }
+    });
 }
   
-angular.module('angularTemplate', [
+angular.module('story-book', [
   'templates-app',
   'templates-common',
-  'angularTemplate.home',
   'ngAnimate',
   'ngCookies',
   'ngMaterial',
   'ngSanitize',
   'ui.router',
+  'story-book.chapter',
+  'story-book.section',
+  'story-book.stories',
+  'story-book.story',
   'errors',
   'dataFactory'])
   .config(config)
-  .run(run);
+  .run(run)
+  .controller('homeController', HomeController);

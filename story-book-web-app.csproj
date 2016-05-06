@@ -44,10 +44,16 @@
     <Content Include="e2e-tests\protractor.conf.js" />
     <Content Include="Gruntfile.js" />
     <Content Include="karma.conf.js" />
+    <Content Include="src\app\chapter\chapter.js" />
     <Content Include="src\app\data\chapter.js" />
     <Content Include="src\app\data\section.js" />
     <Content Include="src\app\data\story.js" />
-    <Content Include="src\app\home\home.scss" />
+    <Content Include="src\app\home.tpl.html" />
+    <Content Include="src\app\section\section.js" />
+    <Content Include="src\app\section\section.tpl.html" />
+    <Content Include="src\app\stories\stories.scss" />
+    <Content Include="src\app\story\story.js" />
+    <Content Include="src\app\story\story.tpl.html" />
     <Content Include="src\common\loading\loading.scss" />
     <Content Include="src\scss\colors.scss" />
     <Content Include="src\scss\main.scss" />
@@ -57,6 +63,10 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="LICENCE" />
+    <Content Include="src\app\chapter\chapter.scss" />
+    <Content Include="src\app\chapter\chapter.tpl.html" />
+    <Content Include="src\app\story\story.scss" />
+    <Content Include="src\app\section\section.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -67,8 +77,8 @@
   <ItemGroup>
     <Content Include="src\app\app.js" />
     <Content Include="src\app\app.spec.js" />
-    <Content Include="src\app\home\home.js" />
-    <Content Include="src\app\home\home.tpl.html" />
+    <Content Include="src\app\stories\stories.js" />
+    <Content Include="src\app\stories\stories.tpl.html" />
     <Content Include="src\app\parent.tpl.html" />
     <Content Include="src\assets\favicon.ico" />
     <Content Include="src\common\dataFactory\dataFactory.js" />

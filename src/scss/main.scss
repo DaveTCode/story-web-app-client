@@ -9,5 +9,6 @@ html, body {
   position: relative;
 }
 
-@import '../app/home/home.scss';
+@import '../app/stories/stories.scss';
+@import '../app/chapter/chapter.scss';
 @import '../common/loading/loading.scss';

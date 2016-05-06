@@ -1,15 +1,12 @@
-<md-content>
-  <md-toolbar>
-    <div class="md-toolbar-tools">
-      <md-button class="md-icon-button" aria-label="Settings">
-        <i class="material-icons">home</i>
-      </md-button>
-      <h2>
-        <span>Story Book</span>
-      </h2>
-    </div>
-  </md-toolbar>
-  <br />
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Settings">
+      <i class="material-icons">home</i>
+    </md-button>
+    <h2>
+      <span>Story Book</span>
+    </h2>
+  </div>
+</md-toolbar>
 
-  <div ui-view="main"></div>
-</md-content>
+<md-content ui-view="main" layout="column"></md-content>
