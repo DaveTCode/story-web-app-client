@@ -11,8 +11,7 @@
     "prestart": "npm install && grunt build",
     "start": "http-server -a localhost -p 8000 -c-1",
     "pretest": "npm install && grunt build",
-    "test": "grunt karma:continuous",
-    "coveralls": "coveralls coverage"
+    "test": "grunt karma:continuous"
   },
   "version": "0.0.1",
   "dependencies": {
