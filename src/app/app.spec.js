@@ -2,7 +2,7 @@ describe( 'AppCtrl', function() {
   describe( 'dummyTest', function() {
     var AppCtrl, $location, $scope;
 
-    beforeEach( module( 'angularTemplate' ) );
+    beforeEach( module( 'story-book' ) );
 
     beforeEach( inject( function( $controller, _$location_, $rootScope ) {
       $location = _$location_;
