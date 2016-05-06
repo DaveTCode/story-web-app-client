@@ -51,6 +51,11 @@ function config($urlRouterProvider, $stateProvider) {
         }
       },
       resolve: {
+        'stories': function () {
+          return [
+            
+          ];
+        },
         'unassignedSections': function () {
           return [
             new Section(1, 'A loose section', 'This is a snippet of the section', new Date(), new Date()),
@@ -73,6 +78,7 @@ angular.module('story-book', [
   'story-book.section',
   'story-book.stories',
   'story-book.story',
+  'story-book.data-layer',
   'errors',
   'dataFactory'])
   .config(config)
