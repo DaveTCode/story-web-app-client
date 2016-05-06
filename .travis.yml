@@ -8,3 +8,5 @@ before_script:
 branches:
   only:
     - master
+after_success:
+  - coveralls
