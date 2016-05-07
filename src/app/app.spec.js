@@ -1,16 +1,18 @@
-describe( 'AppCtrl', function() {
-  describe( 'dummyTest', function() {
-    var AppCtrl, $location, $scope;
+describe( 'Main Application File', function() {
+  describe( 'HomeController', function() {
+    var $controller;
 
     beforeEach( module( 'story-book' ) );
 
-    beforeEach( inject( function( $controller, _$location_, $rootScope ) {
-      $location = _$location_;
-      $scope = $rootScope.$new();
+    beforeEach( inject( function( _$controller_, _$state_ ) {
+      $controller = _$controller_;
+      $state = _$state_;
     }));
 
-    it( 'should pass a dummy test', inject( function() {
-      expect( true ).toBeTruthy();
+    it( 'should instantiate the controller with a list of unassigned sections', inject( function() {
+      var controller = $controller('homeController', { $state: $state, unassignedSections: [] });
+      
+      expect(controller.unassignedSections).toEqual([]);
     }));
   });
 });
